@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  webappwithdocker:
+    image: ${DOCKER_REGISTRY-}webappwithdocker
+    volumes: 
+      - "C:/Users/arsurya/.azure:/root/.azure"
+    build:
+      context: .
+      dockerfile: WebAppWithDocker/Dockerfile
+#    environment:
+#      - AZURE_TENANT_ID="72f988bf-86f1-41af-91ab-2d7cd011db47"
+
